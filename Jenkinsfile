@@ -5,8 +5,7 @@ node {
     tool name: 'MAVEN-3.5.0', type: 'maven'
     sh 'mvn clean compile package deploy'
     stage 'ENV Dev Deploy'
-    sh 
-    '''
+    sh '''
     cd /var/lib/jenkins/ansible
     ansible-playbook -i DEVAPP -u ec2-user --private-key ec2-user.pem STUDENT-DEV-APP-DEPLOY.yml
     '''

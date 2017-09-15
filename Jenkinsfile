@@ -1,6 +1,6 @@
 node {
     stage 'Download-SCM'
-    git 'https://github.com/10JP1A0505/https-github.com-carreerit-mavenrepo.git'
+    git 'https://github.com/10JP1A0505/mavenrepo.git'
     stage 'Maven Compile'
     tool name: 'MAVEN-3.5.0', type: 'maven'
     sh 'mvn clean compile package deploy'
